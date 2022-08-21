@@ -1,0 +1,55 @@
+
+.home-page {
+    background: #313659;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    color: #69D957;
+    font-family: 'League Spartan', 'sans-serif';
+    font-size: 50px;
+}
+
+.logo {
+    width: 35px;
+    padding: 0 10px;
+}
+
+.info-div {
+    margin: 10px 40px;
+}
+
+.mission-title {
+    color: #69D957;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-weight: 800;
+    font-size: 24px;
+    margin: 0;
+}
+
+.mission-div {
+    margin: 0px 0px 30px 0px;
+}
+
+.mission-statement {
+    margin: 10px 0;
+    color: white;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-weight: 400;
+}
+
+.feature-div {
+    display: flex;
+    
+}
+
+.feature-img {
+    width: 55px;
+}
+
