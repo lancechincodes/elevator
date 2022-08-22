@@ -23,6 +23,10 @@
 
 .info-div {
     margin: 10px 40px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .mission-title {
@@ -42,14 +46,46 @@
     color: white;
     font-family: 'Libre Franklin', 'sans-serif';
     font-weight: 400;
+    font-size: 20px;
 }
 
 .feature-div {
     display: flex;
-    
+    margin-bottom: 30px;
+}
+
+.feature-text-div {
+    margin-left: 20px;
+}
+
+.feature-title {
+    margin: 7px 0;
+    color: #69D957;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-size: 20px;
+}
+
+.feature-text {
+    margin: 5px 0;
+    color: white;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-size: 16px;
 }
 
 .feature-img {
     width: 55px;
 }
 
+.get-started-button {
+    display: flex;
+    justify-content: center;
+    background-color: #69D957;
+    margin: 30px;
+    border-radius: 10px;    
+}
+
+.get-started {
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-size: 20px;
+    color: #313659;
+}
