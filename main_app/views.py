@@ -7,3 +7,6 @@ from django.views.generic.base import TemplateView
 # extending from View class
 class Home(TemplateView):
     template_name = "home.html"
+
+class GetStarted(TemplateView):
+    template_name = "get-started.html"
