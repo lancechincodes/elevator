@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/login.css' %}" />
+{% endblock %}
+
 
 {% block content %}
-<h1>Login page</h1>
+<a href="{% url 'signup' %}">
+    <h1>Sign up</h1>
+</a>
+<h1>Log in</h1>
 
 <form method="POST" action="{% url 'login' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" class="btn" value="login">
+    <input type="submit" class="btn" value="log in">
     <!-- Feature of Django auth that will automatically redirect a user that tries to access a protected route back to that route after they log in -->
     <input type="hidden" name="next" value="{{ next }}"> 
 </form>

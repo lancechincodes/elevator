@@ -49,7 +49,7 @@ class ApplicationUpdate(LoginRequiredMixin, UpdateView):
 class ApplicationDelete(LoginRequiredMixin, DeleteView):
     model = Application
     fields = '__all__'
-    success_url = '/applications_index/'
+    success_url = '/applications/' # reference path with success url
 
 # SIGN UP (Note: Log in is predefined by Django auth)
 def signup(request):
@@ -62,7 +62,7 @@ def signup(request):
             user = form.save()
             #log a user in 
             login(request, user)
-            return redirect('applications_index')
+            return redirect('applications_index') # reference name of url path with redirect
         else:
             error_message = 'Invalid sign up. Please try again.'
     form = UserCreationForm()

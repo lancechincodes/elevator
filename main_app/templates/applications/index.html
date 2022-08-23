@@ -9,6 +9,16 @@
 <h1>Hello from main page</h1>
 {% for application in applications %}
     <p>Company: {{ application.company }}</p>
+    <a href="{% url 'applications_update' application.id %}">Edit</a>
+    <a href="{% url 'applications_delete' application.id %}">Delete</a>
 {% endfor %}
+<a href="{% url 'applications_create' %}">
+    <h1>Add app</h1>
+</a>
+
+<a href="{% url 'logout' %}">
+    <h1>Logout</h1>
+</a>
+
 
 {% endblock %}
