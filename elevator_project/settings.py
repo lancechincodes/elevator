@@ -115,6 +115,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+
+# After successful login 
+LOGIN_REDIRECT_URL = '/applications/'
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'main_app/static')]
 
 # Default primary key field type
