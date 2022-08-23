@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -31,3 +32,7 @@ class Application(models.Model):
 
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name} applied to {self.company} as a {self.position}'
+
+    # reverse will return the correct path for the detail named route
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'cat_id': self.id})

@@ -33,6 +33,7 @@ class ApplicationDetail(DetailView):
 class ApplicationCreate(CreateView):
     model = Application
     fields = ['company', 'position', 'application_link', 'location', 'status', 'date_applied', 'notes']
+    success_url = '/applications/'
 
 # UPDATE one application
 class ApplicationUpdate(UpdateView):
