@@ -24,4 +24,17 @@
     <input type="submit"/>
 </form>
 
+<script>
+  const dateEl = document.getElementById('id_date_applied');
+  M.Datepicker.init(dateEl, {
+    format: 'm-dd-yy',
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true,
+  });
+
+  const selectEl = document.getElementById('id_status');
+  M.FormSelect.init(selectEl);
+</script>
+
 {% endblock %}
