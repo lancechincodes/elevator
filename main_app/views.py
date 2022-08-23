@@ -8,6 +8,8 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required # protects view functions
+from django.contrib.auth.mixins import LoginRequiredMixin # protects class-based views
 
 # import model(s)
 from .models import Application
@@ -17,6 +19,7 @@ from .models import Application
 class Home(TemplateView):
     template_name = "home.html"
 
+@login_required
 def applications_index(request):
     applications = Application.objects.filter(user=request.user)
     return render(request, 'applications/index.html', { 'applications': applications})
@@ -24,7 +27,7 @@ def applications_index(request):
 # Class-based views (CBVs) 
 
 # CREATE one application
-class ApplicationCreate(CreateView):
+class ApplicationCreate(LoginRequiredMixin, CreateView):
     model = Application
     fields = ['company', 'position', 'application_link', 'location', 'status', 'date_applied', 'notes']
 
@@ -36,12 +39,12 @@ class ApplicationCreate(CreateView):
         return super().form_valid(form)
 
 # UPDATE one application
-class ApplicationUpdate(UpdateView):
+class ApplicationUpdate(LoginRequiredMixin, UpdateView):
     model = Application
     fields = ['company', 'position', 'application_link', 'location', 'status', 'date_applied', 'notes']
 
 # DELETE one application
-class ApplicationDelete(DeleteView):
+class ApplicationDelete(LoginRequiredMixin, DeleteView):
     model = Application
     fields = '__all__'
     success_url = '/applications_index/'
