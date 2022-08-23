@@ -17,19 +17,11 @@ from .models import Application
 class Home(TemplateView):
     template_name = "home.html"
 
-class GetStarted(TemplateView):
-    template_name = "get-started.html"
+def applications_index(request):
+    applications = Application.objects.filter(user=request.user)
+    return render(request, 'applications/index.html', { 'applications': applications})
 
 # Class-based views (CBVs) 
-# GET all applications
-class ApplicationList(ListView):
-    model = Application
-    fields = '__all__'
-
-# GET one application
-class ApplicationDetail(DetailView):
-    model = Application
-    fields = '__all__'
 
 # CREATE one application
 class ApplicationCreate(CreateView):
