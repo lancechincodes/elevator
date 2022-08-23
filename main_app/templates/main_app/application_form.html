@@ -1,6 +1,18 @@
 {% extends 'base.html'%}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/application_form.css' %}" />
+{% endblock %}
 
 {% block content %}
+<!-- object will be set to None in CreateView -->
+{% if object %}
+<h1>Edit app</h1>
+{% else %}
+<h1>Add app</h1>
+{% endif %}
+
 <!-- empty action makes the form post to the same url to display it -->
 <form action="" method="POST">
     <!-- security purposes -->

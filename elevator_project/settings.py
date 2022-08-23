@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "django.contrib.admin",
-    "django.contrib.auth", # built-in authentican functionality
+    "django.contrib.auth", # built-in authentication functionality
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
