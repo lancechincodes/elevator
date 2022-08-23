@@ -31,7 +31,7 @@ class Application(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.user.first_name} {self.user.last_name} applied to {self.company} as a {self.position}'
+        return f'{self.user.username} created an entry for {self.company} as a {self.position}'
 
     # reverse will return the correct path
     def get_absolute_url(self):
