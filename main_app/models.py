@@ -21,18 +21,19 @@ class Application(models.Model):
     location = models.CharField(max_length=100)
     application_link = models.CharField(max_length=100)
     status = models.CharField(
-        max_length=2, 
+        max_length=2, # corresponds to 1st index of sets of tuples
         choices=STATUS_CHOICES, 
         default=STATUS_CHOICES[0][0],
     )
-    date_applied = models.DateField('date applied')
+    date_applied = models.DateField('date applied') # parameter customizes what is shown in forms
     notes = models.TextField(max_length=500)
     # foreign key linking to user instance
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE) # on_delete will delete all children of deleted parent element
 
+    # dunder (double underscore) method to print a useful message
     def __str__(self):
         return f'{self.user.username} created an entry for {self.company} as a {self.position}'
 
-    # reverse will return the correct path
+    # reverse will return the correct path named application index
     def get_absolute_url(self):
          return reverse('applications_index')

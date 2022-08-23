@@ -90,6 +90,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
+    # commented below so that password is not checked if it is similar to username (just to simplify process)
     # {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",},
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
@@ -117,6 +118,7 @@ STATIC_URL = "static/"
 # After successful login 
 LOGIN_REDIRECT_URL = '/applications/'
 
+# After log out, send back to home
 LOGOUT_REDIRECT_URL = '/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'main_app/static')]

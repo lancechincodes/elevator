@@ -5,8 +5,8 @@ from django.http import HttpResponse # a class to handle sending a type of respo
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.contrib.auth import login
+from django.views.generic.edit import CreateView, UpdateView, DeleteView # CUD
+from django.contrib.auth import login # imported so that user is logged in immediately following sign up
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required # protects view functions
 from django.contrib.auth.mixins import LoginRequiredMixin # protects class-based views
@@ -19,6 +19,8 @@ from .models import Application
 class Home(TemplateView):
     template_name = "home.html"
 
+# Function view 
+# GET all applications
 @login_required
 def applications_index(request):
     applications = Application.objects.filter(user=request.user)
@@ -49,7 +51,7 @@ class ApplicationDelete(LoginRequiredMixin, DeleteView):
     fields = '__all__'
     success_url = '/applications_index/'
 
-# SIGNUP 
+# SIGN UP (Note: Log in is predefined by Django auth)
 def signup(request):
     error_message = ''
     if request.method == 'POST':
@@ -66,6 +68,3 @@ def signup(request):
     form = UserCreationForm()
     context = {'form': form, 'error_message': error_message}
     return render(request, 'registration/signup.html', context)
-
-
-
