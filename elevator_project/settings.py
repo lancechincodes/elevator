@@ -119,6 +119,8 @@ STATIC_URL = "static/"
 # After successful login 
 LOGIN_REDIRECT_URL = '/applications/'
 
+LOGOUT_REDIRECT_URL = '/'
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'main_app/static')]
 
 # Default primary key field type
