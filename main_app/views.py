@@ -33,7 +33,13 @@ class ApplicationDetail(DetailView):
 class ApplicationCreate(CreateView):
     model = Application
     fields = ['company', 'position', 'application_link', 'location', 'status', 'date_applied', 'notes']
-    success_url = '/applications/'
+
+    # override CreateView's form_valid method to assign the logged in user (self.request.user)
+    def form_valid(self, form):
+        # assign the logged in user (where the form.instance is the application)
+        form.instance.user = self.request.user
+        # super() to invoke methods inherited by the superclass
+        return super().form_valid(form)
 
 # UPDATE one application
 class ApplicationUpdate(UpdateView):

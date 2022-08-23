@@ -33,6 +33,6 @@ class Application(models.Model):
     def __str__(self):
         return f'{self.user.first_name} {self.user.last_name} applied to {self.company} as a {self.position}'
 
-    # reverse will return the correct path for the detail named route
+    # reverse will return the correct path
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'cat_id': self.id})
+         return reverse('applications_index')
