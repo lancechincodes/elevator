@@ -97,15 +97,6 @@ input {
     cursor: pointer;
 }
 
-
-.bottom-stripe {
-    width: 100%;
-    background-color: #69D957;
-    position: absolute;
-    bottom: 0;
-    height: 10px;
-}
-
 @media screen and (min-width: 750px) {
     .mobile {
         display: none;
