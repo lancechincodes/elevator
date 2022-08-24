@@ -9,6 +9,7 @@ psycopg2-binary = "*"
 python-dotenv = "*"
 gunicorn = "*"
 django-on-heroku = "*"
+decouple = "*"
 
 [dev-packages]
 
