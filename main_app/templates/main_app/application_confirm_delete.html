@@ -6,17 +6,41 @@
 {% endblock %}
 
 {% block content %}
-<h1>Delete app</h1>
-
-<h4>
-	Are you sure you want to delete your {{ object.company }} - {{ object.position }} application?
-</h4>
-
-<form action="" method="POST">
-	{% csrf_token %}
-	<input type="submit" value="Confirm" class="btn" />
-	<a href="{% url 'applications_index' %}">Cancel</a>
-</form>
-
+<div class="delete-page">
+	<div class="header">
+		<div class="logo-div">
+			<h1 class="title">elevator</h1>
+			<img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
+		</div>
+		<div class="top-btns">
+			<div class="top-btn">
+				<a href="{% url 'applications_index' %}">
+					<p class="p-btn">View all apps</p>
+				</a>
+			</div>
+			<div class="top-btn">
+				<a href="{% url 'logout' %}">
+					<p class="p-btn">Logout</p>
+				</a>
+			</div>
+		</div>
+	  </div>
+	  <div class="top-bar">
+		<img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
+		<h3 class="top-title">Delete app</h3>
+	  </div>
+	  <div class="info-div">
+		<p class="confirm-question">Are you sure you want to delete your {{ object.company }} - {{ object.position }} application?</p>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<div class="buttons">
+				<a href="{% url 'applications_index' %}">
+					<button value="Cancel" class="cancel-confirm-btn">Cancel</button>
+				</a>
+				<button type="submit" value="Confirm" class="cancel-confirm-btn">Confirm</button>
+			</div>
+		</form>		
+	  </div>
+</div>
 
 {% endblock %}
