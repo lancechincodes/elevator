@@ -1,0 +1,92 @@
+* {
+    font-family: 'Libre Franklin', sans-serif;
+    color: white;
+}
+
+.log-in-page {
+    background: #313659;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.title {
+    color: #69D957;
+    font-family: 'League Spartan', 'sans-serif';
+    font-weight: 700;
+    font-size: 50px;
+    margin: 0;
+}
+
+.logo {
+    width: 55px;
+    padding: 0 10px;
+}
+
+.info-div {
+    margin: 10px 40px;
+}
+
+.enter-div {
+    display: flex;
+    margin: 0px 0px 30px 0px;
+}
+
+.enter-text {
+    font-size: 25px;
+    margin: 0px;
+    font-weight: 600;
+}
+
+.sign-up-text {
+    color: white;
+}
+
+.log-in-text {
+    color: #69D957;
+}
+
+.vertical-divider {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin: 0 10px;
+}
+
+p {
+    margin: 25px 0;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+input {
+    color: white;
+}
+
+.log-in-btn {
+    background-color: #69D957;
+    color: #313659;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.bottom-stripe {
+    width: 100%;
+    background-color: #69D957;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+}
