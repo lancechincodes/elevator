@@ -63,6 +63,7 @@
     display: flex;
     align-items: center;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .folder-icon {
@@ -79,6 +80,8 @@
 form {
     margin: 10px;
     background: white;
+    border: 2px solid #E3E8FF;
+    border-radius: 5px;
 }
 
 label {

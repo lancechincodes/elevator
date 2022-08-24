@@ -68,13 +68,23 @@
 .top {
     border-bottom: 3px solid black;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
 
+.ic-elevator-symbol {
+    width: 35px;
+}
+
+.elevator-symbol {
+    width: 25px;
 }
 
 .company-position {
     font-size: 20px;
     font-weight: 700;
-    margin: 15px 10px;
+    margin: 15px 0px;
 }
 
 .notes {

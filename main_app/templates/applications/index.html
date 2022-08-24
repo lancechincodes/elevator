@@ -30,6 +30,13 @@
         <div class="app-card">
             <div class="top">
                 <p class="company-position">{{ application.company}} - {{ application.position}}</p>
+                {% if application.status == 'IC'%}
+                <img class="ic-elevator-symbol" src="{% static 'images/two-triangle.svg' %}" alt="Elevator Symbol"/>
+                {% elif application.status == 'A' or application.status == 'I' or application.status == 'O'%}
+                <img class="elevator-symbol" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
+                {% elif application.status == 'R' %}
+                <img class="elevator-symbol" src="{% static 'images/down-triangle.svg' %}" alt="Elevator Symbol"/>
+                {% endif %}
             </div>
             <p class="notes">{{ application.notes }}</p>
             <div class="status-div">
