@@ -9,6 +9,9 @@ psycopg2-binary = "*"
 python-dotenv = "*"
 gunicorn = "*"
 django-on-heroku = "*"
+django-browser-reload = "*"
+django-cors-headers = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
