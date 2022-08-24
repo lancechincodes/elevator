@@ -57,8 +57,27 @@
     text-align: center;
 }
 
+.top-bar {
+    background: #E3E8FF;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.folder-icon {
+    width: 45px;
+    margin: 10px;
+}
+
+.top-title {
+    margin: 10px 0px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
 .app-card {
-    margin: 15px;
+    margin: 10px;
     background-color: white;
     border: 3px solid #99ACFF;
     border-radius: 5px;
@@ -138,4 +157,12 @@ span {
     margin: 0;
     text-align: center;
     color: white;
+}
+
+.ic-elevator-symbol-sm {
+    width: 30px;
+}
+
+.elevator-symbol-sm {
+    width: 20px;
 }

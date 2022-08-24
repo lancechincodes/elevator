@@ -25,6 +25,52 @@
             </div>
         </div>
     </div>
+
+    <a class='dropdown-trigger' href='#' data-target='dropdown1'>
+        <div class="top-bar">
+            <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
+                <h3 class="top-title">App elevator</h3>
+        </div>
+    </a>
+
+    <ul id='dropdown1' class='dropdown-content'>
+        <li>
+            <a href="#!">
+                <img class="ic-elevator-symbol-sm" src="{% static 'images/two-triangle.svg' %}" alt="Elevator Symbol"/>
+                Incomplete
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+            <a href="#!">
+                <img class="elevator-symbol-sm" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
+                Applied
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+            <a href="#!">
+                <img class="elevator-symbol-sm" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
+                Interviewed
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+            <a href="#!">
+                <img class="elevator-symbol-sm" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
+                Offered
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+            <a href="#!">
+                <img class="elevator-symbol-sm" src="{% static 'images/down-triangle.svg' %}" alt="Elevator Symbol"/>
+                Rejected
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+    </ul>
+
     
     {% for application in applications %}
         <div class="app-card">
@@ -64,5 +110,14 @@
         </div>
     {% endfor %}
 </div>
+
+<script>
+    const elems = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(elems, {
+        alignment: 'left',
+        autoTrigger: true,
+    });
+
+</script>
 
 {% endblock %}
