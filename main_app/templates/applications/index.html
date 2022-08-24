@@ -121,7 +121,11 @@
                     <div class="bottom-left">
                         <p class="p-text" ><a class="application-link" href="{{application.application_link}}" target="_blank">{{application.application_link}} </a></p>
                         <p class="p-text location"><span>Location:</span> {{ application.location}}</p>
+                        {% if application.status == 'IC'%}
+                        <p class="p-text applied-on"><span>Applied on:</span> N/A</p>
+                        {% else %}
                         <p class="p-text applied-on"><span>Applied on:</span> {{ application.date_applied}}</p>
+                        {% endif %}
                     </div>
                     <div class="bottom-right">
                         <a href="{% url 'applications_update' application.id %}">
