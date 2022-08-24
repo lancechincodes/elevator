@@ -6,23 +6,49 @@
 {% endblock %}
 
 {% block content %}
-<!-- object will be set to None in CreateView -->
-{% if object %}
-<h1>Edit app</h1>
-{% else %}
-<h1>Add app</h1>
-{% endif %}
 
-<!-- empty action makes the form post to the same url to display it -->
-<form action="" method="POST">
-    <!-- security purposes -->
-    {% csrf_token %}
-    <table>
-        <!-- Render the inputs inside of <tr>s and <td>s -->
-        {{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit" class="btn"/>
-</form>
+<div class="form-page">
+  <div class="header">
+    <div class="logo-div">
+        <h1 class="title">elevator</h1>
+        <img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
+    </div>
+    <div class="top-btns">
+        <div class="top-btn">
+            <a href="{% url 'applications_index' %}">
+                <p class="p-btn">View all apps</p>
+            </a>
+        </div>
+        <div class="top-btn">
+            <a href="{% url 'logout' %}">
+                <p class="p-btn">Logout</p>
+            </a>
+        </div>
+    </div>
+  </div>
+  <!-- object will be set to None in CreateView -->
+  <div class="top-bar">
+    <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
+    {% if object %}
+    <h3 class="top-title">Edit app</h3>
+    {% else %}
+    <h3 class="top-title">Add app</h3>
+    {% endif %}
+  </div>
+
+  <!-- empty action makes the form post to the same url to display it -->
+  <form action="" method="POST">
+      <!-- security purposes -->
+      {% csrf_token %}
+      <table>
+          <!-- Render the inputs inside of <tr>s and <td>s -->
+          {{ form.as_table }}
+      </table>
+      <div class="button-div">
+        <button type="submit" value="Submit" class="submit-btn">Submit</button>
+      </div>
+  </form>
+</div>
 
 <script>
   const dateEl = document.getElementById('id_date_applied');

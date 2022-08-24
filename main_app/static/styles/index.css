@@ -6,7 +6,7 @@
 .index-page {
     background: #313659;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .header {

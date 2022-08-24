@@ -3,13 +3,13 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 
 # Create your models here.
-IN_PROGRESS = 'IP'
+INCOMPLETE = 'IC'
 APPLIED = 'A'
 INTERVIEWED = 'I'
 OFFERED = 'O'
 REJECTED = 'R'
 STATUS_CHOICES = [
-    (IN_PROGRESS, 'In Progress'),
+    (INCOMPLETE, 'Incomplete'),
     (APPLIED, 'Applied'),
     (INTERVIEWED, 'Interviewed'),
     (OFFERED, 'Offered'),
