@@ -145,13 +145,14 @@
     {% endfor %}
 </div>
 
-<script defer>
-    const elems = document.querySelectorAll('.dropdown-trigger');
-    M.Dropdown.init(elems, {
-        alignment: 'left',
-        autoTrigger: true,
-    });
-git 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elems = document.querySelectorAll('.dropdown-trigger');
+        M.Dropdown.init(elems, {
+            alignment: 'left',
+            autoTrigger: true,
+        });
+    })
 </script>
 
 {% endblock %}
