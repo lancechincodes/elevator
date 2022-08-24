@@ -1,0 +1,131 @@
+* {
+    color: #313659;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.index-page {
+    background: #313659;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    margin: 30px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-div {
+    display: flex;
+}
+
+.title {
+    color: #69D957;
+    font-family: 'League Spartan', 'sans-serif';
+    font-weight: 700;
+    font-size: 35px;
+    margin: 0;
+}
+
+.logo {
+    width: 40px;
+    padding: 0 10px;
+}
+
+.info-div {
+    margin: 10px 40px;
+}
+
+.top-btns {
+    display: flex;
+}
+
+.top-btn {
+    color: #313659;
+    background-color: #69D957;
+    border: none;
+    font-size: 12px;
+    margin: 0 5px;
+    font-weight: 800;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.p-btn {
+    margin: 0;
+    text-align: center;
+}
+
+.app-card {
+    margin: 15px;
+    background-color: white;
+    border: 3px solid #99ACFF;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.top {
+    border-bottom: 3px solid black;
+    display: flex;
+
+}
+
+.company-position {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 10px;
+}
+
+.notes {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.status-div {
+    display: flex;
+    margin: 10px;
+    justify-content: right;
+}
+
+.status {
+    margin: 0;
+    font-weight: 700;
+}
+
+.bottom {
+    border-top: 1px solid black;;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-text {
+    margin: 10px;
+}
+
+span {
+    font-weight: 700;
+}
+
+.bottom-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+
+.bot-btn {
+    border: none;
+    font-size: 12px;
+    margin: 0 5px;
+    font-weight: 800;
+    padding: 7px 15px;
+    border-radius: 10px;
+    background-color: #313659;
+}
+
+.edit-delete-btn {
+    margin: 0;
+    text-align: center;
+    color: white;
+}

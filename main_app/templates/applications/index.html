@@ -6,19 +6,56 @@
 {% endblock %}
 
 {% block content %}
-<h1>Hello from main page</h1>
-{% for application in applications %}
-    <p>Company: {{ application.company }}</p>
-    <a href="{% url 'applications_update' application.id %}">Edit</a>
-    <a href="{% url 'applications_delete' application.id %}">Delete</a>
-{% endfor %}
-<a href="{% url 'applications_create' %}">
-    <h1>Add app</h1>
-</a>
-
-<a href="{% url 'logout' %}">
-    <h1>Logout</h1>
-</a>
-
+<div class="index-page">
+    <div class="header">
+        <div class="logo-div">
+            <h1 class="title">elevator</h1>
+            <img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
+        </div>
+        <div class="top-btns">
+            <div class="top-btn">
+                <a href="{% url 'applications_create' %}">
+                    <p class="p-btn">+ Add app</p>
+                </a>
+            </div>
+            <div class="top-btn">
+                <a href="{% url 'logout' %}">
+                    <p class="p-btn">Logout</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    {% for application in applications %}
+        <div class="app-card">
+            <div class="top">
+                <p class="company-position">{{ application.company}} - {{ application.position}}</p>
+            </div>
+            <p class="notes">{{ application.notes }}</p>
+            <div class="status-div">
+                <p class="status">Status: {{ application.get_status_display }}</p>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <p class="p-text" ><a class="application-link" href="{{application.application_link}}">{{application.application_link}} </a></p>
+                    <p class="p-text location"><span>Location:</span> {{ application.location}}</p>
+                    <p class="p-text applied-on"><span>Applied on:</span> {{ application.date_applied}}</p>
+                </div>
+                <div class="bottom-right">
+                    <div class="bot-btn edit-btn">
+                        <a href="{% url 'applications_update' application.id %}">
+                            <p class="edit-delete-btn">Edit</p>
+                        </a>
+                    </div>
+                    <div class="bot-btn delete-btn">
+                        <a href="{% url 'applications_delete' application.id %}">
+                            <p class="edit-delete-btn">Delete</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
