@@ -13,16 +13,17 @@
             <img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
         </div>
         <div class="top-btns">
-            <div class="top-btn">
-                <a href="{% url 'applications_create' %}">
+            <a href="{% url 'applications_create' %}">
+                <div class="top-btn">
+
                     <p class="p-btn">+ Add app</p>
-                </a>
-            </div>
-            <div class="top-btn">
-                <a href="{% url 'logout' %}">
+                </div>
+            </a>
+            <a href="{% url 'logout' %}">
+                <div class="top-btn">
                     <p class="p-btn">Logout</p>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -123,16 +124,16 @@
                         <p class="p-text applied-on"><span>Applied on:</span> {{ application.date_applied}}</p>
                     </div>
                     <div class="bottom-right">
-                        <div class="bot-btn edit-btn">
-                            <a href="{% url 'applications_update' application.id %}">
+                        <a href="{% url 'applications_update' application.id %}">
+                            <div class="bot-btn edit-btn">
                                 <p class="edit-delete-btn">Edit</p>
-                            </a>
-                        </div>
-                        <div class="bot-btn delete-btn">
-                            <a href="{% url 'applications_delete' application.id %}">
+                            </div>
+                        </a>
+                        <a href="{% url 'applications_delete' application.id %}">
+                            <div class="bot-btn delete-btn">
                                 <p class="edit-delete-btn">Delete</p>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

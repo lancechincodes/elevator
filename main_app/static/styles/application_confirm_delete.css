@@ -6,6 +6,7 @@
 .delete-page {
     background: #313659;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -50,6 +51,10 @@
     font-weight: 800;
     padding: 10px 15px;
     border-radius: 10px;
+}
+
+.top-btn:hover {
+    background-color: #58b649;
 }
 
 .p-btn {
@@ -105,4 +110,15 @@
     padding: 12px 20px;
     border-radius: 10px;
     margin: 5px;
+}
+
+.cancel-confirm-btn:hover {
+    background-color: #4956b6;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+    .delete-page {
+        max-width: 1300px;
+    }
 }

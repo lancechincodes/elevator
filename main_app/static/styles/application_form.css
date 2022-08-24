@@ -3,11 +3,11 @@
     font-family: 'Libre Franklin', sans-serif;
 }
 
-
 .form-page {
     background: #313659;
     height: 100vh;
     overflow-x: hidden;
+    width: 100vw;
 }
 
 .header {
@@ -51,6 +51,10 @@
     font-weight: 800;
     padding: 10px 15px;
     border-radius: 10px;
+}
+
+.top-btn:hover {
+    background-color: #58b649;
 }
 
 .p-btn {
@@ -110,7 +114,11 @@ tr {
     color: white;
 }
 
-li span {
+.datepicker-table td.is-selected {
+    background-color: #69D957;
+}
+
+.dropdown-content li>span {
     color: #313659;
 }
 
@@ -129,4 +137,15 @@ li span {
     padding: 12px 20px;
     border-radius: 10px;
     margin: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #58b649;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+    .form-page {
+        max-width: 1300px;
+    }
 }
