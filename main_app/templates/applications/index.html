@@ -1,0 +1,157 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="index-page">
+    <div class="header">
+        <div class="logo-div">
+            <h1 class="title">elevator</h1>
+            <img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
+        </div>
+        <div class="top-btns">
+            <a href="{% url 'applications_create' %}">
+                <div class="top-btn">
+
+                    <p class="p-btn">+ Add app</p>
+                </div>
+            </a>
+            <a href="{% url 'logout' %}">
+                <div class="top-btn">
+                    <p class="p-btn">Logout</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <a class='dropdown-trigger' href='#' data-target='dropdown1'>
+        <div class="top-bar">
+            <div class="top-left">
+                <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
+                {% block title %}
+                <h3 class="top-title">App elevator</h3>
+                {% endblock %}
+            </div>
+            <div class="top-right">
+                <img class="dropdown-icon" src="{% static 'images/dropdown.svg' %}" alt="Dropdown Icon"/>
+            </div>
+        </div>
+    </a>
+
+    <ul id='dropdown1' class='dropdown-content'>
+        <li>
+            <a href="{% url 'applications_index' %}">
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/star.svg' %}" alt="Elevator Level"/>
+                    <span>All apps</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'applications_ic' %}">
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/one.svg' %}" alt="Elevator Level"/>
+                    <span>Incomplete</span>
+                </div>
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+            <a href="{% url 'applications_a' %}">
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/two.svg' %}" alt="Elevator Level"/>
+                    <span>Applied</span>
+                </div>
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+            <a href="{% url 'applications_i' %}">
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/three.svg' %}" alt="Elevator Level"/>
+                    <span>Interviewed</span>
+                </div>
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+            <a href="{% url 'applications_o' %}">
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/four.svg' %}" alt="Elevator Level"/>
+                    <span>Offered</span>
+                </div>
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+            <a href="{% url 'applications_r' %}">
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/ground.svg' %}" alt="Elevator Level"/>
+                    <span>Rejected</span>
+                </div>
+            </a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+    </ul>
+
+    
+    {% for application in applications %}
+        <div class="app-card">
+            <div class="top">
+                <p class="company-position">{{ application.company}} - {{ application.position}}</p>
+                {% if application.status == 'IC'%}
+                <img class="ic-elevator-symbol" src="{% static 'images/two-triangle.svg' %}" alt="Elevator Symbol"/>
+                {% elif application.status == 'A' or application.status == 'I' or application.status == 'O'%}
+                <img class="elevator-symbol" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
+                {% elif application.status == 'R' %}
+                <img class="elevator-symbol" src="{% static 'images/down-triangle.svg' %}" alt="Elevator Symbol"/>
+                {% endif %}
+            </div>
+            <div class="mid-bot">
+                <div class="middle">
+                    <p class="notes">{{ application.notes }}</p>
+                    <div class="status-div">
+                        <p class="status">Status: {{ application.get_status_display }}</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="bottom-left">
+                        <p class="p-text" ><a class="application-link" href="{{application.application_link}}" target="_blank">{{application.application_link}} </a></p>
+                        <p class="p-text location"><span>Location:</span> {{ application.location}}</p>
+                        {% if application.status == 'IC'%}
+                        <p class="p-text applied-on"><span>Applied on:</span> N/A</p>
+                        {% else %}
+                        <p class="p-text applied-on"><span>Applied on:</span> {{ application.date_applied}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="bottom-right">
+                        <a href="{% url 'applications_update' application.id %}">
+                            <div class="bot-btn edit-btn">
+                                <p class="edit-delete-btn">Edit</p>
+                            </div>
+                        </a>
+                        <a href="{% url 'applications_delete' application.id %}">
+                            <div class="bot-btn delete-btn">
+                                <p class="edit-delete-btn">Delete</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<script>
+    const elems = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(elems, {
+        alignment: 'left',
+        autoTrigger: true,
+    });
+
+</script>
+
+{% endblock %}

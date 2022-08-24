@@ -6,14 +6,63 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="home-page">
     <div class="header">
         <h1 class="title">elevator</h1>
         <img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
     </div>
-    
-    <div class="info-div">
+
+
+    <div class="desktop">
+        <div class="collection-images">
+            <img class="collection" src="{% static 'images/collection.svg' %}" alt="Collection of Desk Supplies"/>
+        </div>
+        
+        <div class="info-div">
+            <div class="mission-div">
+                <h3 class="mission-title">Our mission</h3>
+                <h3 class="mission-statement">We make keeping track of job applications easy</h3>
+            </div>
+            <div class="features-div">
+                <div class="feature-div">
+                    <img class="feature-img" src="{% static 'images/simple-ui.svg' %}" alt="Simple User Interface Icon"/>
+                    <div class="feature-text-div">
+                        <h4 class="feature-title">Simple user interface</h4>
+                        <p class="feature-text">Minimal design and easy to navigate</p>
+                    </div>
+                </div>
+                <div class="feature-div">
+                    <img class="feature-img" src="{% static 'images/boxes.svg' %}" alt="Organized Icon"/>
+                    <div class="feature-text-div">
+                        <h4 class="feature-title">Stay organized</h4>
+                        <p class="feature-text">Browse applications by status</p>
+                    </div>
+                </div>
+                <div class="feature-div">
+                    <img class="feature-img" src="{% static 'images/calendar.svg' %}" alt="Calendar Icon"/>
+                    <div class="feature-text-div">
+                        <h4 class="feature-title">Keep up-to-date with applications</h4>
+                        <p class="feature-text">Record the date you apply</p>
+                    </div>
+                </div>
+                <div class="feature-div">
+                    <img class="feature-img" src="{% static 'images/puzzle.svg' %}" alt="Perfect Fit Icon"/>
+                    <div class="feature-text-div">
+                        <h4 class="feature-title">Find your perfect fit</h4>
+                        <p class="feature-text">Update notes at each step of the recruiting process</p>
+                    </div>
+                </div>
+            </div>
+            <a class="get-started-link" href="{% url 'signup' %}">
+                <div class="get-started-button">
+                    <h2 class="get-started">Get started</h2>
+                </div>    
+            </a>
+        </div>
+    </div>
+
+
+    <div class="mobile">
         <div class="mission-div">
             <h3 class="mission-title">Our mission</h3>
             <h3 class="mission-statement">We make keeping track of job applications easy</h3>
@@ -27,24 +76,34 @@
                 </div>
             </div>
             <div class="feature-div">
-                <img class="feature-img" src="{% static 'images/boxes.svg' %}" alt="Simple User Interface Icon"/>
+                <img class="feature-img" src="{% static 'images/boxes.svg' %}" alt="Organized Icon"/>
                 <div class="feature-text-div">
                     <h4 class="feature-title">Stay organized</h4>
-                    <p class="feature-text">Divide applications into different categories</p>
+                    <p class="feature-text">Browse applications by status</p>
                 </div>
             </div>
             <div class="feature-div">
-                <img class="feature-img" src="{% static 'images/puzzle.svg' %}" alt="Simple User Interface Icon"/>
+                <img class="feature-img" src="{% static 'images/calendar.svg' %}" alt="Calendar Icon"/>
+                <div class="feature-text-div">
+                    <h4 class="feature-title">Keep up-to-date with applications</h4>
+                    <p class="feature-text">Record the date you apply</p>
+                </div>
+            </div>
+            <div class="feature-div">
+                <img class="feature-img" src="{% static 'images/puzzle.svg' %}" alt="Perfect Fit Icon"/>
                 <div class="feature-text-div">
                     <h4 class="feature-title">Find your perfect fit</h4>
-                    <p class="feature-text">Record and update notes at each of the recruiting process</p>
+                    <p class="feature-text">Update notes at each step of the recruiting process</p>
                 </div>
             </div>
         </div>
+        <a class="get-started-link" href="{% url 'signup' %}">
+            <div class="get-started-button">
+                <h2 class="get-started">Get started</h2>
+            </div>    
+        </a>
     </div>
 
-    <div class="get-started-button mobile">Get Started</div>
-
+    <div class="bottom-stripe"></div>
 </div>
-
 {% endblock %}

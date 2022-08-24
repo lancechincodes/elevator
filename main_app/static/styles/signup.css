@@ -1,0 +1,141 @@
+* {
+    font-family: 'Libre Franklin', sans-serif;
+    color: white;
+}
+
+.sign-up-page {
+    background: #313659;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.title {
+    color: #69D957;
+    font-family: 'League Spartan', 'sans-serif';
+    font-weight: 600;
+    font-size: 45px;
+    margin: 0;
+}
+
+.logo {
+    width: 50px;
+    padding: 0 10px;
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    margin: 10px 40px;
+}
+
+.enter-div {
+    display: flex;
+    margin: 0px 0px 20px 0px;
+}
+
+.enter-text {
+    font-size: 25px;
+    margin: 0px;
+    font-weight: 600;
+}
+
+.sign-up-text {
+    color: #69D957;
+}
+
+.log-in-text {
+    color: white;
+}
+
+.vertical-divider {
+    width: 2px;
+    height: 30px;
+    background-color: white;
+    margin: 0 10px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+input {
+    color: white;
+}
+
+.helptext {
+    display: none;    
+}
+
+li {
+    font-size: 12px;
+}
+
+ul {
+    margin: 0px 0px;
+}
+
+.sign-up-btn {
+    background-color: #69D957;
+    color: #313659;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 10px;
+    max-width: 200px;
+}
+
+.sign-up-btn:hover {
+    background-color: #58b649;
+    cursor: pointer;
+}
+
+.bottom-stripe {
+    width: 100%;
+    background-color: #69D957;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+}
+
+@media screen and (min-width: 750px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin: 20px;
+    }
+    
+    .collection {
+        border: none;
+        width: 360px;
+    }
+
+    .info-div {
+        margin: 10px 40px;
+    }
+}

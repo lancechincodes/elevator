@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/application_confirm_delete.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="delete-page">
+	<div class="header">
+		<div class="logo-div">
+			<h1 class="title">elevator</h1>
+			<img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
+		</div>
+		<div class="top-btns">
+			<a href="{% url 'applications_index' %}">
+				<div class="top-btn">
+	  
+					<p class="p-btn">View all apps</p>
+				</div>
+			</a>
+			<a href="{% url 'logout' %}">
+				<div class="top-btn">
+					<p class="p-btn">Logout</p>
+				</div>
+			</a>
+		</div>
+	  </div>
+	  <div class="top-bar">
+		<img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
+		<h3 class="top-title">Delete app</h3>
+	  </div>
+	  <div class="info-div">
+		<p class="confirm-question">Are you sure you want to delete your {{ object.company }} - {{ object.position }} application?</p>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<div class="buttons">
+				<a href="{% url 'applications_index' %}">
+					<button value="Cancel" class="cancel-confirm-btn">Cancel</button>
+				</a>
+				<button type="submit" value="Confirm" class="cancel-confirm-btn">Confirm</button>
+			</div>
+		</form>		
+	  </div>
+</div>
+
+{% endblock %}

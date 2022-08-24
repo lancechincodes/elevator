@@ -3,33 +3,47 @@
     background: #313659;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header {
     display: flex;
     justify-content: center;
+    margin: 30px auto;
 }
 
 .title {
     color: #69D957;
     font-family: 'League Spartan', 'sans-serif';
-    font-size: 50px;
+    font-weight: 600;
+    font-size: 45px;
+    margin: 0;
 }
 
 .logo {
-    width: 35px;
+    width: 50px;
     padding: 0 10px;
 }
 
-.info-div {
+.desktop {
+    display: none;
+}
+
+.mobile {
     margin: 10px 40px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .mission-title {
     color: #69D957;
     font-family: 'Libre Franklin', 'sans-serif';
     font-weight: 800;
-    font-size: 24px;
+    font-size: 22px;
     margin: 0;
 }
 
@@ -41,15 +55,93 @@
     margin: 10px 0;
     color: white;
     font-family: 'Libre Franklin', 'sans-serif';
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 16px;
 }
 
 .feature-div {
     display: flex;
-    
+    margin-bottom: 25px;
+}
+
+.feature-text-div {
+    margin-left: 20px;
+}
+
+.feature-title {
+    margin: 7px 0;
+    color: #69D957;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.feature-text {
+    margin: 5px 0;
+    color: white;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 370px;
 }
 
 .feature-img {
     width: 55px;
 }
 
+.get-started-button {
+    display: flex;
+    justify-content: center;
+    background-color: #69D957;
+    border-radius: 10px;    
+    max-width: 200px;
+    margin: 0;
+}
+
+.get-started-button:hover {
+    background-color: #58b649;
+}
+
+.get-started-link {
+    text-decoration: none;
+}
+
+.get-started {
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-size: 16px;
+    font-weight: 800;
+    color: #313659;
+    margin: 15px;
+}
+
+.bottom-stripe {
+    width: 100%;
+    background-color: #69D957;
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+}
+
+@media screen and (min-width: 750px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin: 20px;
+    }
+    
+    .collection {
+        border: none;
+        width: 360px;
+    }
+
+    .info-div {
+        margin: 10px 40px;
+    }
+}
