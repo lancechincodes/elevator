@@ -28,44 +28,59 @@
 
     <a class='dropdown-trigger' href='#' data-target='dropdown1'>
         <div class="top-bar">
-            <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
+            <div class="top-left">
+                <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
                 <h3 class="top-title">App elevator</h3>
+            </div>
+            <div class="top-right">
+                <img class="dropdown-icon" src="{% static 'images/dropdown.svg' %}" alt="Dropdown Icon"/>
+            </div>
         </div>
     </a>
 
     <ul id='dropdown1' class='dropdown-content'>
         <li>
             <a href="#!">
-                <img class="ic-elevator-symbol-sm" src="{% static 'images/two-triangle.svg' %}" alt="Elevator Symbol"/>
-                Incomplete
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/one.svg' %}" alt="Elevator Level"/>
+                    <span>Incomplete</span>
+                </div>
             </a>
         </li>
         <li class="divider" tabindex="-1"></li>
         <li>
             <a href="#!">
-                <img class="elevator-symbol-sm" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
-                Applied
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/two.svg' %}" alt="Elevator Level"/>
+                    <span>Applied</span>
+                </div>
             </a>
         </li>
         <li class="divider" tabindex="-1"></li>
         <li>
             <a href="#!">
-                <img class="elevator-symbol-sm" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
-                Interviewed
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/three.svg' %}" alt="Elevator Level"/>
+                    <span>Interviewed</span>
+                </div>
             </a>
         </li>
         <li class="divider" tabindex="-1"></li>
         <li>
             <a href="#!">
-                <img class="elevator-symbol-sm" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
-                Offered
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/four.svg' %}" alt="Elevator Level"/>
+                    <span>Offered</span>
+                </div>
             </a>
         </li>
         <li class="divider" tabindex="-1"></li>
         <li>
             <a href="#!">
-                <img class="elevator-symbol-sm" src="{% static 'images/down-triangle.svg' %}" alt="Elevator Symbol"/>
-                Rejected
+                <div class="level-div">
+                    <img class="level" src="{% static 'images/ground.svg' %}" alt="Elevator Level"/>
+                    <span>Rejected</span>
+                </div>
             </a>
         </li>
         <li class="divider" tabindex="-1"></li>

@@ -61,13 +61,29 @@
     background: #E3E8FF;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 10px;
     border-radius: 5px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
 }
 
 .folder-icon {
     width: 45px;
     margin: 10px;
+}
+
+.dropdown-icon {
+    width: 20px;
+    margin: 0px 10px;
 }
 
 .top-title {
@@ -159,10 +175,12 @@ span {
     color: white;
 }
 
-.ic-elevator-symbol-sm {
-    width: 30px;
+.level-div {
+    display: flex;
+    align-items: center;
 }
 
-.elevator-symbol-sm {
-    width: 20px;
+.level {
+    width: 25px;
+    margin-right: 5px;
 }
