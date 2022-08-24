@@ -37,3 +37,7 @@ class Application(models.Model):
     # reverse will return the correct path named application index
     def get_absolute_url(self):
          return reverse('applications_index')
+
+    # order desc by date
+    class Meta:
+        ordering = ['-date_applied']

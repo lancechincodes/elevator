@@ -30,8 +30,36 @@ def applications_index(request):
 @login_required
 def applications_ic(request):
     applications = Application.objects.filter(status='IC')
+    applications = applications.filter(user=request.user)
     return render(request, 'applications/ic.html', { 'applications': applications})
 
+# GET all applied applications
+@login_required
+def applications_a(request):
+    applications = Application.objects.filter(status='A')
+    applications = applications.filter(user=request.user)
+    return render(request, 'applications/a.html', { 'applications': applications})
+
+# GET all interviewed applications
+@login_required
+def applications_i(request):
+    applications = Application.objects.filter(status='I')
+    applications = applications.filter(user=request.user)
+    return render(request, 'applications/i.html', { 'applications': applications})
+
+# GET all offered applications
+@login_required
+def applications_o(request):
+    applications = Application.objects.filter(status='O')
+    applications = applications.filter(user=request.user)
+    return render(request, 'applications/o.html', { 'applications': applications})
+
+# GET all rejected applications
+@login_required
+def applications_r(request):
+    applications = Application.objects.filter(status='R')
+    applications = applications.filter(user=request.user)
+    return render(request, 'applications/r.html', { 'applications': applications})
 
 # Class-based views (CBVs) 
 
