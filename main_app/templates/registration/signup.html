@@ -12,7 +12,34 @@
         <h1 class="title">elevator</h1>
         <img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
     </div>
-    <div class="info-div">
+
+    <div class="desktop">
+        <div class="collection-images">
+            <img class="collection" src="{% static 'images/collection.svg' %}" alt="Collection of Desk Supplies"/>
+        </div>
+
+        <div class="info-div">
+            <div class="enter-div">
+                <h1 class="enter-text sign-up-text">Sign up</h1>
+                <div class="vertical-divider"></div>
+                <a href="{% url 'login' %}">
+                    <h1 class="enter-text log-in-text">Log in</h1>
+                </a>
+            </div>
+            
+            {% if error_message %}
+            <p>{{ error_message }}</p>
+            {% endif %}
+            
+            <form method="POST" action="{% url 'signup' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="sign-up-btn" value="sign up">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="mobile">
         <div class="enter-div">
             <h1 class="enter-text sign-up-text">Sign up</h1>
             <div class="vertical-divider"></div>

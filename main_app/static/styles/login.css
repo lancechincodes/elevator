@@ -31,10 +31,12 @@
     padding: 10px;
 }
 
-.info-div {
-    width: 100%;
-    padding: 10px 40px;
-    max-width: 400px;
+.desktop {
+    display: none;
+}
+
+.mobile {
+    margin: 10px 40px;
 }
 
 .enter-div {
@@ -101,4 +103,28 @@ input {
     position: absolute;
     bottom: 0;
     height: 10px;
+}
+
+@media screen and (min-width: 750px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin: 20px;
+    }
+    
+    .collection {
+        border: none;
+        width: 360px;
+    }
+
+    .info-div {
+        margin: 10px 40px;
+    }
 }
