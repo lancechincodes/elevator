@@ -1,0 +1,1 @@
+web: gunicorn elevator_project.wsgi
