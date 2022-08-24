@@ -26,6 +26,13 @@ def applications_index(request):
     applications = Application.objects.filter(user=request.user)
     return render(request, 'applications/index.html', { 'applications': applications})
 
+# GET all incomplete applications
+@login_required
+def applications_ic(request):
+    applications = Application.objects.filter(status='IC')
+    return render(request, 'applications/ic.html', { 'applications': applications})
+
+
 # Class-based views (CBVs) 
 
 # CREATE one application
