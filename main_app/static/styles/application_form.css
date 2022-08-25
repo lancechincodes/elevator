@@ -153,6 +153,18 @@ select {
     font-weight: 300;
 }
 
+.errorlist {
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.errorlist li {
+    font-style: italic;
+    font-size: 14px;
+}
+
 
 @media screen and (min-width: 700px) {
     .form-page {
