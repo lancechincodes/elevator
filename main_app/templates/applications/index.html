@@ -27,6 +27,20 @@
         </div>
     </div>
 
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="{% url 'applications_ic' %}">Incomplete</a>
+          <a class="dropdown-item" href="{% url 'applications_a' %}">Applied</a>
+          <a class="dropdown-item" href="{% url 'applications_i' %}">Interviewed</a>
+          <a class="dropdown-item" href="{% url 'applications_o' %}">Offered</a>
+          <a class="dropdown-item" href="{% url 'applications_r' %}">Rejected</a>
+        </div>
+      </div>
+
     <a class='dropdown-trigger' href='#' data-target='dropdown1'>
         <div class="top-bar">
             <div class="top-left">
@@ -149,10 +163,13 @@
     document.addEventListener('DOMContentLoaded', function() {
         const elems = document.querySelectorAll('.dropdown-trigger');
         M.Dropdown.init(elems, {
-            alignment: 'left',
-            autoTrigger: true,
+            // alignment: 'left',
+            // autoTrigger: true,
         });
     })
+
+    // $('.dropdown-trigger').dropdown();
+
 </script>
 
 {% endblock %}
