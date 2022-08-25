@@ -50,15 +50,4 @@
   </form>
 </div>
 
-<script>
-  const dateEl = document.getElementById('id_date_applied');
-  M.Datepicker.init(dateEl, {
-    format: 'yyyy-mm-dd',
-    autoClose: true,
-  });
-
-  const selectEl = document.getElementById('id_status');
-  M.FormSelect.init(selectEl);
-</script>
-
 {% endblock %}

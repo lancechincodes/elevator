@@ -207,15 +207,21 @@ span {
 }
 
 .dropdown-menu.show {
-    margin-left: 6px;
-    width: 98%;
-    float: none;
+    margin-left: 1200px;
+    margin-right: 10px;
+    position: absolute;
     border-radius: 5px;
+    background-color: #E3E8FF;
+    border: 3px solid #313659;
 }
 
 .dropdown-item {
     height: 50px;
     border-bottom: 1px solid #4956b6;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
 }
 
 #dropdownMenuButton {

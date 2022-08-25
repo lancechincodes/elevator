@@ -102,30 +102,6 @@ input {
     font-size: 16px;
 }
 
-tr {
-    border: 2px solid #E3E8FF;
-}
-
-.datepicker-date-display {
-    background: #313659;
-}
-
-.btn-flat {
-    color: #313659;
-}
-
-.date-text {
-    color: white;
-}
-
-.datepicker-table td.is-selected {
-    background-color: #69D957;
-}
-
-.dropdown-content li>span {
-    color: #313659;
-}
-
 .button-div {
     display: flex;
     justify-content: right;
@@ -148,18 +124,35 @@ tr {
     cursor: pointer;
 }
 
-.datepicker-modal {
-    height: 428px;
+table {
+    width: 100%;
 }
 
-.modal-overlay {
-    display: none;
-    background-color: transparent;
+
+tr {
+    height: 80px;
+    border-bottom: 1px solid #E3E8FF;
 }
 
-li {
-    height: 20px;
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #313659;
+    outline: none;
 }
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+select {
+    padding: 7px;
+    border-radius: 5px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+}
+
 
 @media screen and (min-width: 700px) {
     .form-page {

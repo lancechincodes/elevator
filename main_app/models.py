@@ -25,7 +25,7 @@ class Application(models.Model):
         choices=STATUS_CHOICES,
         default=STATUS_CHOICES[0][0] 
     )
-    date_applied = models.DateField('date applied', null=True, blank=True) # parameter customizes what is shown in forms
+    date_applied = models.CharField(max_length=50)
     notes = models.TextField(max_length=500, blank=True)
     # foreign key linking to user instance
     user = models.ForeignKey(User, on_delete=models.CASCADE) # on_delete will delete all children of deleted parent element
@@ -37,7 +37,3 @@ class Application(models.Model):
     # reverse will return the correct path named application index
     def get_absolute_url(self):
          return reverse('applications_index')
-
-    # order desc by date
-    class Meta:
-        ordering = ['-date_applied']
