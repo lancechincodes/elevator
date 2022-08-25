@@ -14,13 +14,12 @@
         <img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
     </div>
     <div class="top-btns">
-      <a href="{% url 'applications_index' %}">
+      <a class="top-btn-link" href="{% url 'applications_index' %}">
           <div class="top-btn">
-
               <p class="p-btn">View all apps</p>
           </div>
       </a>
-      <a href="{% url 'logout' %}">
+      <a class="top-btn-link" href="{% url 'logout' %}">
           <div class="top-btn">
               <p class="p-btn">Logout</p>
           </div>

@@ -13,13 +13,13 @@
             <img class="logo" src="{% static 'images/logo.svg' %}" alt="Elevator Logo"/>
         </div>
         <div class="top-btns">
-            <a href="{% url 'applications_create' %}">
+            <a class="top-btn-link" href="{% url 'applications_create' %}">
                 <div class="top-btn">
 
                     <p class="p-btn">+ Add app</p>
                 </div>
             </a>
-            <a href="{% url 'logout' %}">
+            <a class="top-btn-link" href="{% url 'logout' %}">
                 <div class="top-btn">
                     <p class="p-btn">Logout</p>
                 </div>
@@ -27,90 +27,59 @@
         </div>
     </div>
 
-
     <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
+        <a class='dropdown' href='#' id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="top-bar">
+                <div class="top-left">
+                    <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
+                    {% block title %}
+                    <h3 class="top-title">App elevator</h3>
+                    {% endblock %}
+                </div>
+                <div class="top-right">
+                    <img class="dropdown-icon" src="{% static 'images/dropdown.svg' %}" alt="Dropdown Icon"/>
+                </div>
+            </div>
+        </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="{% url 'applications_ic' %}">Incomplete</a>
-          <a class="dropdown-item" href="{% url 'applications_a' %}">Applied</a>
-          <a class="dropdown-item" href="{% url 'applications_i' %}">Interviewed</a>
-          <a class="dropdown-item" href="{% url 'applications_o' %}">Offered</a>
-          <a class="dropdown-item" href="{% url 'applications_r' %}">Rejected</a>
-        </div>
-      </div>
-
-    <a class='dropdown-trigger' href='#' data-target='dropdown1'>
-        <div class="top-bar">
-            <div class="top-left">
-                <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
-                {% block title %}
-                <h3 class="top-title">App elevator</h3>
-                {% endblock %}
-            </div>
-            <div class="top-right">
-                <img class="dropdown-icon" src="{% static 'images/dropdown.svg' %}" alt="Dropdown Icon"/>
-            </div>
-        </div>
-    </a>
-
-    <ul id='dropdown1' class='dropdown-content'>
-        <li>
-            <a href="{% url 'applications_index' %}">
+            <a class="dropdown-item" href="{% url 'applications_index' %}">
                 <div class="level-div">
                     <img class="level" src="{% static 'images/star.svg' %}" alt="Elevator Level"/>
                     <span>All apps</span>
                 </div>
             </a>
-        </li>
-        <li>
-            <a href="{% url 'applications_ic' %}">
+            <a class="dropdown-item" href="{% url 'applications_ic' %}">
                 <div class="level-div">
                     <img class="level" src="{% static 'images/one.svg' %}" alt="Elevator Level"/>
                     <span>Incomplete</span>
                 </div>
             </a>
-        </li>
-        <li class="divider" tabindex="-1"></li>
-        <li>
-            <a href="{% url 'applications_a' %}">
+            <a class="dropdown-item" href="{% url 'applications_a' %}">
                 <div class="level-div">
                     <img class="level" src="{% static 'images/two.svg' %}" alt="Elevator Level"/>
                     <span>Applied</span>
                 </div>
             </a>
-        </li>
-        <li class="divider" tabindex="-1"></li>
-        <li>
-            <a href="{% url 'applications_i' %}">
+            <a class="dropdown-item" href="{% url 'applications_i' %}">
                 <div class="level-div">
                     <img class="level" src="{% static 'images/three.svg' %}" alt="Elevator Level"/>
                     <span>Interviewed</span>
                 </div>
             </a>
-        </li>
-        <li class="divider" tabindex="-1"></li>
-        <li>
-            <a href="{% url 'applications_o' %}">
+            <a class="dropdown-item" href="{% url 'applications_o' %}">
                 <div class="level-div">
                     <img class="level" src="{% static 'images/four.svg' %}" alt="Elevator Level"/>
                     <span>Offered</span>
                 </div>
             </a>
-        </li>
-        <li class="divider" tabindex="-1"></li>
-        <li>
-            <a href="{% url 'applications_r' %}">
+            <a class="dropdown-item" href="{% url 'applications_r' %}">
                 <div class="level-div">
                     <img class="level" src="{% static 'images/ground.svg' %}" alt="Elevator Level"/>
                     <span>Rejected</span>
                 </div>
             </a>
-        </li>
-        <li class="divider" tabindex="-1"></li>
-    </ul>
-
+        </div>
+    </div>
     
     {% for application in applications %}
         <div class="app-card">
@@ -158,18 +127,5 @@
         </div>
     {% endfor %}
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const elems = document.querySelectorAll('.dropdown-trigger');
-        M.Dropdown.init(elems, {
-            // alignment: 'left',
-            // autoTrigger: true,
-        });
-    })
-
-    // $('.dropdown-trigger').dropdown();
-
-</script>
 
 {% endblock %}

@@ -57,6 +57,10 @@
     background-color: #58b649;
 }
 
+.top-btn-link {
+    text-decoration: none !important;
+}
+
 .p-btn {
     margin: 0;
     text-align: center;
@@ -73,6 +77,7 @@
 
 .top-bar:hover {
     background: #c7cff6;
+    text-decoration: none;
 }
 
 .top-left {
@@ -99,6 +104,7 @@
     margin: 10px 0px;
     font-size: 20px;
     font-weight: 800;
+    text-decoration: none;
 }
 
 .app-card {
@@ -159,6 +165,7 @@
 
 span {
     font-weight: 700;
+    font-size: 16px;
 }
 
 .bottom-right {
@@ -190,17 +197,31 @@ span {
 
 .level-div {
     display: flex;
-    align-items: center;
+    align-content: center;
+    margin-top: 6px;
 }
 
 .level {
-    width: 25px;
+    width: 20px;
     margin-right: 5px;
 }
 
-.dropdown-content {
-    z-index: 100;
+.dropdown-menu.show {
+    margin-left: 6px;
+    width: 98%;
+    float: none;
+    border-radius: 5px;
 }
+
+.dropdown-item {
+    height: 50px;
+    border-bottom: 1px solid #4956b6;
+}
+
+#dropdownMenuButton {
+    text-decoration: none;
+}
+
 
 @media screen and (min-width: 700px) {
     .mid-bot {
