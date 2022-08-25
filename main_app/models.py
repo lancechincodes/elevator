@@ -5,14 +5,14 @@ from django.contrib.auth.models import User
 # Create your models here.
 INCOMPLETE = 'IC'
 APPLIED = 'A'
-INTERVIEWED = 'I'
-OFFERED = 'O'
+INTERVIEW = 'I'
+OFFER = 'O'
 REJECTED = 'R'
 STATUS_CHOICES = [
     (INCOMPLETE, 'Incomplete'),
     (APPLIED, 'Applied'),
-    (INTERVIEWED, 'Interviewed'),
-    (OFFERED, 'Offered'),
+    (INTERVIEW, 'Interview'),
+    (OFFER, 'Offer'),
     (REJECTED, 'Rejected')
 ]
 class Application(models.Model):
