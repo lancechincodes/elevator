@@ -45,7 +45,11 @@
           {{ form.as_table }}
       </table>
       <div class="button-div">
+        {% if object %}
+        <button type="submit" value="Submit" class="submit-btn">Save</button>
+        {% else %}
         <button type="submit" value="Submit" class="submit-btn">Submit</button>
+        {% endif %}
       </div>
   </form>
 </div>
