@@ -198,6 +198,10 @@ span {
     margin-right: 5px;
 }
 
+.dropdown-content {
+    z-index: 100;
+}
+
 @media screen and (min-width: 700px) {
     .mid-bot {
         display: flex;
