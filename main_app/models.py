@@ -23,7 +23,7 @@ class Application(models.Model):
     status = models.CharField(
         max_length=2, # corresponds to 1st index of sets of tuples
         choices=STATUS_CHOICES,
-        default=STATUS_CHOICES[0][0], 
+        default=STATUS_CHOICES[0][0] 
     )
     date_applied = models.DateField('date applied', null=True, blank=True) # parameter customizes what is shown in forms
     notes = models.TextField(max_length=500, blank=True)

@@ -148,6 +148,19 @@ tr {
     cursor: pointer;
 }
 
+.datepicker-modal {
+    height: 428px;
+}
+
+.modal-overlay {
+    display: none;
+    background-color: transparent;
+}
+
+li {
+    height: 150px;
+}
+
 @media screen and (min-width: 700px) {
     .form-page {
         max-width: 1300px;
