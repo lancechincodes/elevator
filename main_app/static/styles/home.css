@@ -6,13 +6,13 @@
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .header {
     display: flex;
     justify-content: left;
-    margin: 30px auto;
+    margin: 20px 30px;
 }
 
 .title {
