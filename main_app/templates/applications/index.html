@@ -27,101 +27,103 @@
         </div>
     </div>
 
-    <div class="dropdown">
-        <a class='dropdown' href='#' id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="top-bar">
-                <div class="top-left">
-                    <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
-                    {% block title %}
-                    <h3 class="top-title">App elevator</h3>
-                    {% endblock %}
+    <div class="info-div">
+        <div class="dropdown">
+            <a class='dropdown' href='#' id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="top-bar">
+                    <div class="top-left">
+                        <img class="folder-icon" src="{% static 'images/folder.svg' %}" alt="Folder Icon"/>
+                        {% block title %}
+                        <h3 class="top-title">App elevator</h3>
+                        {% endblock %}
+                    </div>
+                    <div class="top-right">
+                        <img class="dropdown-icon" src="{% static 'images/dropdown.svg' %}" alt="Dropdown Icon"/>
+                    </div>
                 </div>
-                <div class="top-right">
-                    <img class="dropdown-icon" src="{% static 'images/dropdown.svg' %}" alt="Dropdown Icon"/>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'applications_index' %}">
+                    <div class="level-div">
+                        <img class="level" src="{% static 'images/star.svg' %}" alt="Elevator Level"/>
+                        <span>All apps</span>
+                    </div>
+                </a>
+                <a class="dropdown-item" href="{% url 'applications_ic' %}">
+                    <div class="level-div">
+                        <img class="level" src="{% static 'images/one.svg' %}" alt="Elevator Level"/>
+                        <span>Incomplete</span>
+                    </div>
+                </a>
+                <a class="dropdown-item" href="{% url 'applications_a' %}">
+                    <div class="level-div">
+                        <img class="level" src="{% static 'images/two.svg' %}" alt="Elevator Level"/>
+                        <span>Applied</span>
+                    </div>
+                </a>
+                <a class="dropdown-item" href="{% url 'applications_i' %}">
+                    <div class="level-div">
+                        <img class="level" src="{% static 'images/three.svg' %}" alt="Elevator Level"/>
+                        <span>Interviews</span>
+                    </div>
+                </a>
+                <a class="dropdown-item" href="{% url 'applications_o' %}">
+                    <div class="level-div">
+                        <img class="level" src="{% static 'images/four.svg' %}" alt="Elevator Level"/>
+                        <span>Offers</span>
+                    </div>
+                </a>
+                <a class="dropdown-item" href="{% url 'applications_r' %}">
+                    <div class="level-div">
+                        <img class="level" src="{% static 'images/ground.svg' %}" alt="Elevator Level"/>
+                        <span>Rejections</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        {% for application in applications %}
+            <div class="app-card">
+                <div class="top">
+                    <p class="company-position">{{ application.company}} - {{ application.position}}</p>
+                    {% if application.status == 'IC'%}
+                    <img class="ic-elevator-symbol" src="{% static 'images/two-triangle.svg' %}" alt="Elevator Symbol"/>
+                    {% elif application.status == 'A' or application.status == 'I' or application.status == 'O'%}
+                    <img class="elevator-symbol" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
+                    {% elif application.status == 'R' %}
+                    <img class="elevator-symbol" src="{% static 'images/down-triangle.svg' %}" alt="Elevator Symbol"/>
+                    {% endif %}
+                </div>
+                <div class="mid-bot">
+                    <div class="middle">
+                        <p class="notes">{{ application.notes }}</p>
+                        <div class="status-div">
+                            <p class="status">Status: {{ application.get_status_display }}</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="bottom-left">
+                            <p class="p-text" ><a class="application-link" href="{{application.application_link}}" target="_blank">{{application.application_link}} </a></p>
+                            <p class="p-text location"><span>Location:</span> {{ application.location}}</p>
+                            <p class="p-text applied-on"><span>Applied on:</span> {{ application.date_applied}}</p>
+                        </div>
+                        <div class="bottom-right">
+                            <a href="{% url 'applications_update' application.id %}">
+                                <div class="bot-btn edit-btn">
+                                    <p class="edit-delete-btn">Edit</p>
+                                </div>
+                            </a>
+                            <a href="{% url 'applications_delete' application.id %}">
+                                <div class="bot-btn delete-btn">
+                                    <p class="edit-delete-btn">Delete</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="{% url 'applications_index' %}">
-                <div class="level-div">
-                    <img class="level" src="{% static 'images/star.svg' %}" alt="Elevator Level"/>
-                    <span>All apps</span>
-                </div>
-            </a>
-            <a class="dropdown-item" href="{% url 'applications_ic' %}">
-                <div class="level-div">
-                    <img class="level" src="{% static 'images/one.svg' %}" alt="Elevator Level"/>
-                    <span>Incomplete</span>
-                </div>
-            </a>
-            <a class="dropdown-item" href="{% url 'applications_a' %}">
-                <div class="level-div">
-                    <img class="level" src="{% static 'images/two.svg' %}" alt="Elevator Level"/>
-                    <span>Applied</span>
-                </div>
-            </a>
-            <a class="dropdown-item" href="{% url 'applications_i' %}">
-                <div class="level-div">
-                    <img class="level" src="{% static 'images/three.svg' %}" alt="Elevator Level"/>
-                    <span>Interviews</span>
-                </div>
-            </a>
-            <a class="dropdown-item" href="{% url 'applications_o' %}">
-                <div class="level-div">
-                    <img class="level" src="{% static 'images/four.svg' %}" alt="Elevator Level"/>
-                    <span>Offers</span>
-                </div>
-            </a>
-            <a class="dropdown-item" href="{% url 'applications_r' %}">
-                <div class="level-div">
-                    <img class="level" src="{% static 'images/ground.svg' %}" alt="Elevator Level"/>
-                    <span>Rejections</span>
-                </div>
-            </a>
-        </div>
+        {% endfor %}
     </div>
-    
-    {% for application in applications %}
-        <div class="app-card">
-            <div class="top">
-                <p class="company-position">{{ application.company}} - {{ application.position}}</p>
-                {% if application.status == 'IC'%}
-                <img class="ic-elevator-symbol" src="{% static 'images/two-triangle.svg' %}" alt="Elevator Symbol"/>
-                {% elif application.status == 'A' or application.status == 'I' or application.status == 'O'%}
-                <img class="elevator-symbol" src="{% static 'images/up-triangle.svg' %}" alt="Elevator Symbol"/>
-                {% elif application.status == 'R' %}
-                <img class="elevator-symbol" src="{% static 'images/down-triangle.svg' %}" alt="Elevator Symbol"/>
-                {% endif %}
-            </div>
-            <div class="mid-bot">
-                <div class="middle">
-                    <p class="notes">{{ application.notes }}</p>
-                    <div class="status-div">
-                        <p class="status">Status: {{ application.get_status_display }}</p>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="bottom-left">
-                        <p class="p-text" ><a class="application-link" href="{{application.application_link}}" target="_blank">{{application.application_link}} </a></p>
-                        <p class="p-text location"><span>Location:</span> {{ application.location}}</p>
-                        <p class="p-text applied-on"><span>Applied on:</span> {{ application.date_applied}}</p>
-                    </div>
-                    <div class="bottom-right">
-                        <a href="{% url 'applications_update' application.id %}">
-                            <div class="bot-btn edit-btn">
-                                <p class="edit-delete-btn">Edit</p>
-                            </div>
-                        </a>
-                        <a href="{% url 'applications_delete' application.id %}">
-                            <div class="bot-btn delete-btn">
-                                <p class="edit-delete-btn">Delete</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
 </div>
 
 {% endblock %}

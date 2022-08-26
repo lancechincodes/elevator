@@ -122,6 +122,11 @@ ul {
         transform: translateY(-50%);
         margin: 20px;
     }
+
+    .collection-images {
+        display: flex;
+        justify-content: center;
+    }
     
     .collection {
         border: none;
@@ -130,5 +135,29 @@ ul {
 
     .info-div {
         margin: 10px 40px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .header-desktop {
+        display: flex;
+        justify-content: left;
+        margin: 30px auto;
+        margin-top: 0px;
+    }
+    
+    .title-desktop {
+        color: #69D957;
+        font-family: 'League Spartan', 'sans-serif';
+        font-weight: 600;
+        font-size: 60px;
+        margin: 0;
+    }
+
+    .logo-desktop {
+        width: 60px;
+        padding: 0 10px;
     }
 }

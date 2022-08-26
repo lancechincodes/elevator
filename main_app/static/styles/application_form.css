@@ -35,7 +35,10 @@
 }
 
 .info-div {
-    margin: 10px 40px;
+    background-color: #4956b6;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .top-btns {
@@ -72,6 +75,7 @@
     align-items: center;
     margin: 10px;
     border-radius: 5px;
+    border: 3px solid black;
 }
 
 .folder-icon {
@@ -86,9 +90,8 @@
 }
 
 form {
-    margin: 10px;
+    margin: 20px;
     background: white;
-    border: 2px solid #E3E8FF;
     border-radius: 5px;
 }
 
@@ -165,8 +168,17 @@ select {
     font-size: 14px;
 }
 
+.form-box {
+    margin: 10px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 @media screen and (min-width: 700px) {
-    .form-page {
+    .info-div {
         max-width: 1300px;
+        margin: 10px auto;
     }
 }

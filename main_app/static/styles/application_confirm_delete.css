@@ -86,11 +86,10 @@
 }
 
 .info-div {
-    background-color: white;
-    margin: 10px;
-    border: 2px solid #E3E8FF;
+    background-color: #4956b6;
+    margin: 5px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .confirm-question {
@@ -121,8 +120,18 @@
     cursor: pointer;
 }
 
+.delete-box {
+    margin: 10px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+}
+
 @media screen and (min-width: 700px) {
-    .delete-page {
+    .info-div {
         max-width: 1300px;
+        margin: 10px auto;
     }
 }

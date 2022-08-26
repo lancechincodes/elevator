@@ -73,6 +73,7 @@
     justify-content: space-between;
     margin: 10px;
     border-radius: 5px;
+    border: 3px solid black;
 }
 
 .top-bar:hover {
@@ -110,7 +111,7 @@
 .app-card {
     margin: 10px;
     background-color: white;
-    border: 3px solid #99ACFF;
+    border: 3px solid black;
     border-radius: 5px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -207,7 +208,7 @@ span {
 }
 
 .dropdown-menu.show {
-    margin-left: 1200px;
+    margin-left: 1115px;
     margin-right: 10px;
     position: absolute;
     border-radius: 5px;
@@ -228,6 +229,12 @@ span {
     text-decoration: none;
 }
 
+.info-div {
+    background-color: #4956b6;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
 
 @media screen and (min-width: 700px) {
     .mid-bot {
@@ -259,7 +266,8 @@ span {
         margin: 10px;
     }
 
-    .index-page {
+    .info-div {
         max-width: 1300px;
+        margin: 10px auto;
     }
 }
