@@ -98,6 +98,10 @@ input {
 }
 
 @media screen and (min-width: 750px) {
+    .log-in-page {
+        align-items: center;
+    }
+
     .mobile {
         display: none;
     }

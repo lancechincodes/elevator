@@ -6,6 +6,7 @@
 .sign-up-page {
     background: #313659;
     height: 100vh;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -110,6 +111,10 @@ ul {
 }
 
 @media screen and (min-width: 750px) {
+    .sign-up-page {
+        align-items: center;
+    }
+
     .mobile {
         display: none;
     }
