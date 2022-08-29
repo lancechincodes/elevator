@@ -1,5 +1,5 @@
 # Elevator 🔼
-Introducing Elevator – a website that makes tracking job applications simple and easy.
+Introducing Elevator – a website that makes tracking job applications simple and easy!
 
 ## Check It Out 💡 
 - [Elevator](https://ele-vator.herokuapp.com/) 
@@ -50,13 +50,13 @@ As a job seeker, I want to...
 ![ERD](/planning/erd/erd.png)
 
 ## Challenges 💪
-While Django has many convenient built-in features including a user model with authentication and class-based views that simplify routes, understanding what was taking place behind-the-scenes proved to be a challenge. Instead of explicitly being able to control each step of processing a request, it was vital for me to reference the Django document as well as the Object-Relational Mapper to ensure I was performing the response method I intended.  
+While Django has many convenient built-in features including a user model with authentication and class-based views that simplify routes, understanding what was taking place behind-the-scenes proved to be a challenge. Instead of explicitly being able to control each step of processing a request, it was vital for me to reference the Django documentation as well as the Object-Relational Mapper to ensure I was performing the response method I intended.  
 
 ## What's Next 🏁
-Although Elevator is fully equipped to track down job applications for your next job search, its future is still very exciting. A few icebox goals for Elevator are to implement a component to store recruiting documents like resumes and cover letters, as well as a priority property to rank applications from most to least relevant.
+Although Elevator is fully equipped to track down job applications for your next job search, its future is still very exciting. A few icebox goals for Elevator are to implement a component to store recruiting documents like resumes and cover letters, as well as a priority property to rank applications from most interested to least interested.
 
 ## Reflection 🙌
-Building Elevator was a monumental feat in my growth as a software engineer. With only roughly a week's worth of Django knowledge, I envisioned and brought to life a full-stack application with Django's model view template (MVT) architecture. While integrating function views, class-based views, and authentication were challenging, I am proud of my resilience to power through challenges with the help of Google, YouTube, and Django documentation.   
+Building Elevator was a monumental feat in my growth as a software engineer. With only roughly a week's worth of Django knowledge, I envisioned and brought to life a full-stack application with Django's model view template (MVT) architecture. While integrating function views, class-based views, and authentication were challenging, I am proud of my resilience to power through obstacles by referencing Google, YouTube, and the Django documentation.   
 
 ## Connect With Me 👥
 <p align="left">
