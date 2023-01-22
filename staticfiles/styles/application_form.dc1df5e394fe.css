@@ -1,0 +1,184 @@
+* {
+    color: #313659;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.form-page {
+    background: #313659;
+    height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.header {
+    display: flex;
+    margin: 20px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-div {
+    display: flex;
+}
+
+.title {
+    color: #69D957;
+    font-family: 'League Spartan', 'sans-serif';
+    font-weight: 700;
+    font-size: 35px;
+    margin: 0;
+}
+
+.logo {
+    width: 40px;
+    padding: 0 10px;
+}
+
+.info-div {
+    background-color: #4956b6;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.top-btns {
+    display: flex;
+}
+
+.top-btn {
+    color: #313659;
+    background-color: #69D957;
+    border: none;
+    font-size: 12px;
+    margin: 0 5px;
+    font-weight: 800;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.top-btn:hover {
+    background-color: #58b649;
+}
+
+.top-btn-link {
+    text-decoration: none !important;
+}
+
+.p-btn {
+    margin: 0;
+    text-align: center;
+}
+
+.top-bar {
+    background: #E3E8FF;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.folder-icon {
+    width: 40px;
+    margin: 10px;
+}
+
+.top-title {
+    margin: 10px 0px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+form {
+    margin: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+label {
+    font-family: 'Libre Franklin', sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
+input {
+    font-size: 16px;
+}
+
+.button-div {
+    display: flex;
+    justify-content: right;
+}
+
+.submit-btn {
+    color: #313659;
+    background-color: #69D957;
+    border: none;
+    font-size: 12px;
+    margin: 0 5px;
+    font-weight: 800;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #58b649;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+}
+
+
+tr {
+    height: 80px;
+    border-bottom: 1px solid #E3E8FF;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #313659;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+select {
+    padding: 7px;
+    border-radius: 5px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+}
+
+.errorlist {
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.errorlist li {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.form-box {
+    margin: 10px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media screen and (min-width: 700px) {
+    .info-div {
+        max-width: 1300px;
+        margin: 10px auto;
+    }
+}

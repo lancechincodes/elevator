@@ -1,0 +1,273 @@
+* {
+    color: #313659;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.index-page {
+    background: #313659;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    margin: 20px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-div {
+    display: flex;
+}
+
+.title {
+    color: #69D957;
+    font-family: 'League Spartan', 'sans-serif';
+    font-weight: 700;
+    font-size: 35px;
+    margin: 0;
+}
+
+.logo {
+    width: 40px;
+    padding: 0 10px;
+}
+
+.info-div {
+    margin: 10px 40px;
+}
+
+.top-btns {
+    display: flex;
+}
+
+.top-btn {
+    color: #313659;
+    background-color: #69D957;
+    border: none;
+    font-size: 12px;
+    margin: 0 5px;
+    font-weight: 800;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.top-btn:hover {
+    background-color: #58b649;
+}
+
+.top-btn-link {
+    text-decoration: none !important;
+}
+
+.p-btn {
+    margin: 0;
+    text-align: center;
+}
+
+.top-bar {
+    background: #E3E8FF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.top-bar:hover {
+    background: #c7cff6;
+    text-decoration: none;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+}
+
+.folder-icon {
+    width: 40px;
+    margin: 10px;
+}
+
+.dropdown-icon {
+    width: 15px;
+    margin: 0px 10px;
+}
+
+.top-title {
+    margin: 10px 0px;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.app-card {
+    margin: 10px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.top {
+    border-bottom: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.ic-elevator-symbol {
+    width: 35px;
+}
+
+.elevator-symbol {
+    width: 25px;
+}
+
+.company-position {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.notes {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.status-div {
+    display: flex;
+    margin: 10px;
+    justify-content: right;
+}
+
+.status {
+    margin: 0;
+    font-weight: 700;
+}
+
+.bottom {
+    border-top: 1px solid black;;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-text {
+    margin: 7px;
+}
+
+span {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.bottom-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+
+.bot-btn {
+    border: none;
+    font-size: 12px;
+    margin: 0 5px;
+    font-weight: 800;
+    padding: 7px 15px;
+    border-radius: 10px;
+    background-color: #313659;
+}
+
+.bot-btn:hover {
+    background-color: #4956b6;
+}
+
+.edit-delete-btn {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.level-div {
+    display: flex;
+    align-content: center;
+    margin-top: 6px;
+}
+
+.level {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.dropdown-menu.show {
+    margin-left: 1115px;
+    margin-right: 10px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #E3E8FF;
+    border: 3px solid #313659;
+}
+
+.dropdown-item {
+    height: 50px;
+    border-bottom: 1px solid #4956b6;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+#dropdownMenuButton {
+    text-decoration: none;
+}
+
+.info-div {
+    background-color: #4956b6;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media screen and (min-width: 700px) {
+    .mid-bot {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bottom {
+        border: none;
+        border-left: 1px solid black;
+        min-width: 300px;
+    }
+
+    .status-div {
+        justify-content: left;
+    }
+
+    .bottom-right {
+        display: block;
+    }
+
+    .bot-btn {
+        margin: 10px;
+    }
+
+    .info-div {
+        max-width: 1300px;
+        margin: 10px auto;
+    }
+}

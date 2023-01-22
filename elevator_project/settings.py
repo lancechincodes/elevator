@@ -27,7 +27,7 @@ SECRET_KEY = ("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.getenv('MODE') == 'dev' else False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] # any domain can host with asterisk
 
 # Application definition
 
@@ -120,7 +120,8 @@ LOGIN_REDIRECT_URL = '/applications/'
 # After log out, send back to home
 LOGOUT_REDIRECT_URL = '/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'main_app/static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    background: #313659;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html {
+    font-family: Trebuchet, sans-serif;
+}

@@ -1,0 +1,172 @@
+
+.home-page {
+    background: #313659;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.header {
+    display: flex;
+    justify-content: left;
+    margin: 30px;
+}
+
+.title {
+    color: #69D957;
+    font-family: 'League Spartan', 'sans-serif';
+    font-weight: 600;
+    font-size: 45px;
+    margin: 0;
+}
+
+.logo {
+    width: 50px;
+    padding: 0 10px;
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    margin: 0px 30px;
+}
+
+.mission-title {
+    color: #69D957;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-weight: 800;
+    font-size: 22px;
+    margin: 0;
+}
+
+.mission-div {
+    margin: 0px 0px 30px 0px;
+}
+
+.mission-statement {
+    margin: 10px 0;
+    color: white;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.feature-div {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.feature-text-div {
+    margin-left: 20px;
+}
+
+.feature-title {
+    margin: 7px 0;
+    color: #69D957;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.feature-text {
+    margin: 5px 0;
+    color: white;
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-weight: 300;
+    font-size: 16px;
+    max-width: 370px;
+}
+
+.feature-img {
+    width: 55px;
+}
+
+.get-started-button {
+    display: flex;
+    justify-content: center;
+    background-color: #69D957;
+    border-radius: 10px;    
+    max-width: 200px;
+    margin: 0;
+}
+
+.get-started-button:hover {
+    background-color: #58b649;
+}
+
+.get-started-link {
+    text-decoration: none !important;
+}
+
+.get-started {
+    font-family: 'Libre Franklin', 'sans-serif';
+    font-size: 16px;
+    font-weight: 800;
+    color: #313659;
+    margin: 15px;
+}
+
+
+@media screen and (min-width: 750px) {
+    .home-page {
+        align-items: center;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        margin: 20px;
+    }
+
+    .collection-images {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .collection {
+        border: none;
+        width: 360px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .info-div {
+        margin: 10px 40px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .header-desktop {
+        display: flex;
+        justify-content: left;
+        margin: 30px auto;
+        margin-top: 0px;
+    }
+    
+    .title-desktop {
+        color: #69D957;
+        font-family: 'League Spartan', 'sans-serif';
+        font-weight: 600;
+        font-size: 60px;
+        margin: 0;
+    }
+
+    .logo-desktop {
+        width: 60px;
+        padding: 0 10px;
+    }
+}
