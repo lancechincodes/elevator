@@ -40,7 +40,7 @@ certifi==2020.12.5
 # cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1598884132938/work
 # clyent==1.2.2
 # colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
-conda==4.10.1
+# conda==4.10.1
 conda-build==3.21.4
 # conda-content-trust @ file:///tmp/build/80754af9/conda-content-trust_1617045594566/work
 # conda-package-handling @ file:///opt/concourse/worker/volumes/live/73497069-9b43-4ad9-50ec-1abb340e14eb/volume/conda-package-handling_1618262140058/work
