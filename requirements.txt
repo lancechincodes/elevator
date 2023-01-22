@@ -38,7 +38,7 @@ certifi==2020.12.5
 # chardet @ file:///opt/concourse/worker/volumes/live/c798b2ee-88b1-4341-6830-161a92c2399e/volume/chardet_1607706832595/work
 # click @ file:///home/linux1/recipes/ci/click_1610990599742/work
 # cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1598884132938/work
-clyent==1.2.2
+# clyent==1.2.2
 # colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
 conda==4.10.1
 conda-build==3.21.4
