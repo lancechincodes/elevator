@@ -1,4 +1,4 @@
-# alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
+alabaster @ file:///home/ktietz/src/ci/alabaster_1611921544520/work
 anaconda-client==1.7.2
 anaconda-navigator==2.0.3
 anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1610472525955/work
@@ -63,7 +63,7 @@ Django==4.1
 django-browser-reload==1.6.0
 django-cors-headers==3.13.0
 django-dotenv==1.4.2
-# django-on-heroku==1.1.2
+django-on-heroku==1.1.2
 djangorestframework==3.13.1
 docutils @ file:///opt/concourse/worker/volumes/live/c75adaac-4aab-4f8b-53ac-e2f0ae899bdf/volume/docutils_1617481416178/work
 entrypoints==0.3
